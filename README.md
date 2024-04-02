@@ -15,3 +15,19 @@ up to 301
 "fizz buzz"
 5. At the end print the number of times
 "fizz buzz" occurred.
+
+
+### Another mathods
+
+I think the following way is more elegant:
+
+``` rust
+ for i in 1..=301 {
+        match (i % 3, i % 5) {
+            (0, 0) => println!("FizzBuzz"),
+            (0, _) => println!("Fizz"),
+            (_, 0) => println!("Buzz"),
+            _ => {},
+        }
+  }
+```
